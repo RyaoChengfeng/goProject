@@ -6,23 +6,12 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d3ca3b8-dc2b-4d79-b158-1aadfbcdecff" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +19,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -101,6 +91,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished" />
+  </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
     <environment>
@@ -141,29 +135,29 @@
     </state>
     <state x="669" y="262" key="FileChooserDialogImpl/0.28.1920.993@0.28.1920.993" timestamp="1604071805920" />
     <state x="713" y="281" key="FileChooserDialogImpl/67.34.1853.1046@67.34.1853.1046" timestamp="1603565278118" />
-    <state width="763" height="170" key="GridCell.Tab.0.bottom" timestamp="1604128259512">
+    <state width="763" height="170" key="GridCell.Tab.0.bottom" timestamp="1604131408826">
       <screen x="0" y="28" width="1920" height="993" />
     </state>
     <state width="824" height="236" key="GridCell.Tab.0.bottom/0.28.1920.985@0.28.1920.985" timestamp="1603905702561" />
-    <state width="763" height="170" key="GridCell.Tab.0.bottom/0.28.1920.993@0.28.1920.993" timestamp="1604128259512" />
+    <state width="763" height="170" key="GridCell.Tab.0.bottom/0.28.1920.993@0.28.1920.993" timestamp="1604131408826" />
     <state width="1342" height="244" key="GridCell.Tab.0.bottom/67.34.1853.1046@67.34.1853.1046" timestamp="1603566754313" />
-    <state width="763" height="170" key="GridCell.Tab.0.center" timestamp="1604128259512">
+    <state width="763" height="170" key="GridCell.Tab.0.center" timestamp="1604131408825">
       <screen x="0" y="28" width="1920" height="993" />
     </state>
     <state width="824" height="236" key="GridCell.Tab.0.center/0.28.1920.985@0.28.1920.985" timestamp="1603905702560" />
-    <state width="763" height="170" key="GridCell.Tab.0.center/0.28.1920.993@0.28.1920.993" timestamp="1604128259512" />
+    <state width="763" height="170" key="GridCell.Tab.0.center/0.28.1920.993@0.28.1920.993" timestamp="1604131408825" />
     <state width="1342" height="244" key="GridCell.Tab.0.center/67.34.1853.1046@67.34.1853.1046" timestamp="1603566754312" />
-    <state width="763" height="170" key="GridCell.Tab.0.left" timestamp="1604128259512">
+    <state width="763" height="170" key="GridCell.Tab.0.left" timestamp="1604131408825">
       <screen x="0" y="28" width="1920" height="993" />
     </state>
     <state width="824" height="236" key="GridCell.Tab.0.left/0.28.1920.985@0.28.1920.985" timestamp="1603905702560" />
-    <state width="763" height="170" key="GridCell.Tab.0.left/0.28.1920.993@0.28.1920.993" timestamp="1604128259512" />
+    <state width="763" height="170" key="GridCell.Tab.0.left/0.28.1920.993@0.28.1920.993" timestamp="1604131408825" />
     <state width="1342" height="244" key="GridCell.Tab.0.left/67.34.1853.1046@67.34.1853.1046" timestamp="1603566754312" />
-    <state width="763" height="170" key="GridCell.Tab.0.right" timestamp="1604128259512">
+    <state width="763" height="170" key="GridCell.Tab.0.right" timestamp="1604131408826">
       <screen x="0" y="28" width="1920" height="993" />
     </state>
     <state width="824" height="236" key="GridCell.Tab.0.right/0.28.1920.985@0.28.1920.985" timestamp="1603905702561" />
-    <state width="763" height="170" key="GridCell.Tab.0.right/0.28.1920.993@0.28.1920.993" timestamp="1604128259512" />
+    <state width="763" height="170" key="GridCell.Tab.0.right/0.28.1920.993@0.28.1920.993" timestamp="1604131408826" />
     <state width="1342" height="244" key="GridCell.Tab.0.right/67.34.1853.1046@67.34.1853.1046" timestamp="1603566754313" />
     <state width="902" height="298" key="GridCell.Tab.1.bottom" timestamp="1603979271922">
       <screen x="0" y="28" width="1920" height="993" />

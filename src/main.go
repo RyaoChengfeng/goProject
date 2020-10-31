@@ -4,19 +4,24 @@ import (
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 	"net/http"
-	"sync"
+	"time"
 )
 
 type KV struct {
-	key   string
-	value interface{}
+	key    string
+	values Values
+}
+
+type Values struct {
+	value string
+	time  string
 }
 
 type httpError struct {
 	Message string
 }
 
-var kvMap sync.Map
+var kvMap = make(map[string]Values)
 
 func main() {
 	e := echo.New()
@@ -35,8 +40,8 @@ func main() {
 //  POST api/key/:key
 func createJSON(c echo.Context) (err error) {
 	key := c.Param(":key")
-	_, ok := kvMap.Load(key)
-	if !ok {
+	_, ok := kvMap[key]
+	if ok {
 		return ErrorHandler(c, http.StatusBadRequest, "Key has already existed")
 	}
 
@@ -45,47 +50,50 @@ func createJSON(c echo.Context) (err error) {
 		return ErrorHandler(c, http.StatusBadRequest, "A valid value is needed")
 	}
 
-	//tim := time.Now().Format("2006-01-02 15:04:05")
+	tim := time.Now().Format("2006-01-02 15:04:05")
+	values := Values{value, tim}
 
-	kvMap.Store(key, value)
-	return c.JSONPretty(http.StatusOK, KV{key, value}, "	")
+	kvMap[key] = values
+	return c.JSONPretty(http.StatusOK, KV{key, values}, "	")
 }
 
 // GET api/key/:key
 func sendJSON(c echo.Context) (err error) {
 
 	key := c.Param("key")
-	value, ok := kvMap.Load(key)
+	values, ok := kvMap[key]
 	if !ok {
 		return ErrorHandler(c, http.StatusBadRequest, "Key requested is not exist")
 	}
 
-	return c.JSONPretty(http.StatusOK, KV{key, value}, "	")
+	return c.JSONPretty(http.StatusOK, KV{key, values}, "	")
 }
 
 // PUT api/key/:key
 func addKey(c echo.Context) (err error) {
 	key := c.Param("key")
-	_, ok := kvMap.Load(key)
+	_, ok := kvMap[key]
 	if !ok {
 		return ErrorHandler(c, http.StatusBadRequest, "Key requested is not exist")
 	}
 	value := c.FormValue("value")
+	tim := time.Now().Format("2006-01-02 15:04:05")
+	values := Values{value, tim}
 
-	kvMap.Store(key, value)
+	kvMap[key] = values
 
-	return c.JSONPretty(http.StatusOK, KV{key, value}, "	")
+	return c.JSONPretty(http.StatusOK, KV{key, values}, "	")
 }
 
 // DELETE api/key/:key
 func deleteKey(c echo.Context) (err error) {
 	key := c.Param("key")
-	_, ok := kvMap.Load(key)
+	_, ok := kvMap[key]
 	if !ok {
 		return ErrorHandler(c, http.StatusBadRequest, "Key requested is not exist")
 	}
 
-	kvMap.Delete(key)
+	delete(kvMap, key)
 
 	return c.JSON(http.StatusOK, nil)
 }
